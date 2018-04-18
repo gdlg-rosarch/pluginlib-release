@@ -29,9 +29,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef PLUGINLIB__CLASS_LOADER_BASE_H_
-#define PLUGINLIB__CLASS_LOADER_BASE_H_
+#ifndef PLUGINLIB__CLASS_LIST_MACROS_H_
+#define PLUGINLIB__CLASS_LIST_MACROS_H_
 
-#include "./class_loader_base.hpp"
+// *INDENT-OFF* (prevent uncrustify from adding indention below)
+#warning Including header <pluginlib/class_list_macros.h> is deprecated, \
+include <pluginlib/class_list_macros.hpp> instead.
 
-#endif  // PLUGINLIB__CLASS_LOADER_BASE_H_
+#include "./class_list_macros.hpp"
+
+#endif  // PLUGINLIB__CLASS_LIST_MACROS_H_

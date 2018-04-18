@@ -33,8 +33,6 @@
 #include <stdexcept>
 #include <string>
 
-// TODO(wjwwood): replace no lints with the explicit keyword in an ABI break
-
 namespace pluginlib
 {
 
@@ -45,7 +43,7 @@ namespace pluginlib
 class PluginlibException : public std::runtime_error
 {
 public:
-  PluginlibException(const std::string error_desc)  // NOLINT(runtime/explicit)
+  explicit PluginlibException(const std::string & error_desc)
   : std::runtime_error(error_desc) {}
 };
 
@@ -56,7 +54,7 @@ public:
 class InvalidXMLException : public PluginlibException
 {
 public:
-  InvalidXMLException(const std::string error_desc)  // NOLINT(runtime/explicit)
+  explicit InvalidXMLException(const std::string & error_desc)
   : PluginlibException(error_desc) {}
 };
 
@@ -67,7 +65,7 @@ public:
 class LibraryLoadException : public PluginlibException
 {
 public:
-  LibraryLoadException(const std::string error_desc)  // NOLINT(runtime/explicit)
+  explicit LibraryLoadException(const std::string & error_desc)
   : PluginlibException(error_desc) {}
 };
 
@@ -78,7 +76,7 @@ public:
 class ClassLoaderException : public PluginlibException
 {
 public:
-  ClassLoaderException(const std::string error_desc)  // NOLINT(runtime/explicit)
+  explicit ClassLoaderException(const std::string & error_desc)
   : PluginlibException(error_desc) {}
 };
 
@@ -89,7 +87,7 @@ public:
 class LibraryUnloadException : public PluginlibException
 {
 public:
-  LibraryUnloadException(const std::string error_desc)  // NOLINT(runtime/explicit)
+  explicit LibraryUnloadException(const std::string & error_desc)
   : PluginlibException(error_desc) {}
 };
 
@@ -100,7 +98,7 @@ public:
 class CreateClassException : public PluginlibException
 {
 public:
-  CreateClassException(const std::string error_desc)  // NOLINT(runtime/explicit)
+  explicit CreateClassException(const std::string & error_desc)
   : PluginlibException(error_desc) {}
 };
 

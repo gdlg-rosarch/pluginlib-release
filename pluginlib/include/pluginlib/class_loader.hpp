@@ -35,7 +35,7 @@
 #include <vector>
 
 #include "boost/algorithm/string.hpp"
-#include "class_loader/multi_library_class_loader.h"
+#include "class_loader/multi_library_class_loader.hpp"
 #include "pluginlib/class_desc.hpp"
 #include "pluginlib/class_loader_base.hpp"
 #include "pluginlib/exceptions.hpp"
@@ -67,7 +67,7 @@ public:
   /**
    * \param package The package containing the base class
    * \param base_class The type of the base class for classes to be loaded
-   * \param attrib_name The attribute to search for in package.xml files, defaults to "plugin"
+   * \param attrib_name The attribute to search for in manifext.xml files, defaults to "plugin"
    * \param plugin_xml_paths The list of paths of plugin.xml files, defaults to be crawled via
    *   ros::package::getPlugins()
    * \throws pluginlib::ClassLoaderException if package manifest cannot be found

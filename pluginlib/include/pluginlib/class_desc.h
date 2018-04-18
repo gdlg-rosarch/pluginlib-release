@@ -1,5 +1,7 @@
 /*
- * Copyright (c) 2012, Willow Garage, Inc.
+ * Software License Agreement (BSD License)
+ *
+ * Copyright (c) 2017, Open Source Robotics Foundation, Inc.
  * All rights reserved.
  *
  * Redistribution and use in source and binary forms, with or without
@@ -10,7 +12,7 @@
  *     * Redistributions in binary form must reproduce the above copyright
  *       notice, this list of conditions and the following disclaimer in the
  *       documentation and/or other materials provided with the distribution.
- *     * Neither the name of the Willow Garage, Inc. nor the names of its
+ *     * Neither the name of the copyright holders nor the names of its
  *       contributors may be used to endorse or promote products derived from
  *       this software without specific prior written permission.
  *
@@ -26,46 +28,14 @@
  * ARISING IN ANY WAY OUT OF THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE
  * POSSIBILITY OF SUCH DAMAGE.
  */
-#include <ros/console.h>
-#include <pluginlib/class_loader.h>
-#include <vector>
-#include <string>
-#include <iostream>
 
-@
+#ifndef PLUGINLIB__CLASS_DESC_H_
+#define PLUGINLIB__CLASS_DESC_H_
 
-extern "C"
-{
-  std::vector<std::string> availablePlugins(const std::string& package_name)
-  {
-    pluginlib::ClassLoader<$> class_loader(package_name, "$");
-    return(class_loader.getDeclaredClasses());
-  }
+// *INDENT-OFF* (prevent uncrustify from adding indention below)
+#warning Including header <pluginlib/class_desc.h> is deprecated, \
+include <pluginlib/class_desc.hpp> instead.
 
-  bool loadPlugin(const std::string& package_name, const std::string& class_name)
-  {
-    pluginlib::ClassLoader<$> class_loader(package_name, "$");
-    try
-    {
-      class_loader.createInstance(class_name);
-      return true;
-    }
-    catch(...)
-    {
-      return false;
-    }
-  }
+#include "./class_desc.hpp"
 
-  std::string whereIsPluginLocated(const std::string& package_name, const std::string& class_name)
-  {
-    pluginlib::ClassLoader<$> class_loader(package_name, "$");
-    try
-    {
-      return class_loader.getClassLibraryPath(class_name);
-    }
-    catch(...)
-    {
-      return ("Could not find location of plugin " + class_name);
-    }
-  }
-}
+#endif  // PLUGINLIB__CLASS_DESC_H_

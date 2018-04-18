@@ -29,9 +29,13 @@
  * POSSIBILITY OF SUCH DAMAGE.
  */
 
-#ifndef PLUGINLIB__CLASS_LOADER_H_
-#define PLUGINLIB__CLASS_LOADER_H_
+#ifndef PLUGINLIB__PLUGINLIB_EXCEPTIONS_H_
+#define PLUGINLIB__PLUGINLIB_EXCEPTIONS_H_
 
-#include "./class_loader.hpp"
+// *INDENT-OFF* (prevent uncrustify from adding indention below)
+#warning Including header <pluginlib/pluginlib_exceptions.h> is deprecated, \
+include <pluginlib/exceptions.hpp> instead.
 
-#endif  // PLUGINLIB__CLASS_LOADER_H_
+#include "./exceptions.hpp"
+
+#endif  // PLUGINLIB__PLUGINLIB_EXCEPTIONS_H_

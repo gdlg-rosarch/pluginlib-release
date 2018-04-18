@@ -2,39 +2,15 @@
 Changelog for package pluginlib
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-1.11.3 (2018-03-16)
+1.12.0 (2018-03-14)
 -------------------
-* Provide a script to convert include statements to use new headers (`#107 <https://github.com/ros/pluginlib/issues/107>`_)
-* docs: fix minor typo (`#100 <https://github.com/ros/pluginlib/issues/100>`_)
-  Replace wrong/outdated `manifext.xml` with `package.xml` in the docstring of the constructor.
-* Contributors: Alireza, Mikael Arguedas
-
-1.11.2 (2017-11-15)
--------------------
-* Fix cpplint and lint_cmake errors (backport 84) (`#87 <https://github.com/ros/pluginlib/issues/87>`_)
-  * fix line length
-  add back NOLINT on test header to avoid 'should include its header file' cpplint error
-  * lint cmake
-* Continue loading classes on error (`#85 <https://github.com/ros/pluginlib/issues/85>`_)
-  * continue loading classes on error
-  * construct string with file rather than adding new API
-  * match style of the rest of the file
-  * missing whitespace
-* Backport 70 to kinetic (`#82 <https://github.com/ros/pluginlib/issues/82>`_)
-  * rename header files to make clear they are c++
-  * fixup to support new header file names
-  * restore old header names with deprecation warnings for API stability
-  * remove deprecation warnings
-* alphabetize includes (`#80 <https://github.com/ros/pluginlib/issues/80>`_)
-* Contributors: Furushchev, Mikael Arguedas
-
-1.11.1 (2017-10-27)
--------------------
-* update macros in tests to not use the deprecated ones (`#78 <https://github.com/ros/pluginlib/issues/78>`_)
-* update documentation to use doxygen c++ format (`#75 <https://github.com/ros/pluginlib/issues/75>`_)
-* style cleanup (`#64 <https://github.com/ros/pluginlib/issues/64>`_, `#68 <https://github.com/ros/pluginlib/issues/68>`_, `#73 <https://github.com/ros/pluginlib/issues/73>`_ and `#72 <https://github.com/ros/pluginlib/issues/72>`_)
-* add missing include (`#63 <https://github.com/ros/pluginlib/issues/63>`_)
-* Contributors: Mikael Arguedas, William Woodall
+* [warning fix]Cherry-pick `#103 <https://github.com/ros/pluginlib/issues/103>`_ to melodic-devel (`#105 <https://github.com/ros/pluginlib/issues/105>`_)
+* [migration helper] provide a script to convert include statements to use new headers (`#104 <https://github.com/ros/pluginlib/issues/104>`_)
+* [migration] use new class_loader headers and fix deprecation warnings (`#101 <https://github.com/ros/pluginlib/issues/101>`_)
+* [bugfix] Continue loading classes on error (`#85 <https://github.com/ros/pluginlib/issues/85>`_) (`#88 <https://github.com/ros/pluginlib/issues/88>`_)
+* [style] Fix cpplint and lint_cmake errors (`#84 <https://github.com/ros/pluginlib/issues/84>`_)
+* move pluginlib in its own folder (`#83 <https://github.com/ros/pluginlib/issues/83>`_)
+* Contributors: Mikael Arguedas
 
 1.11.0 (2017-07-27)
 -------------------
